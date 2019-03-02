@@ -9,9 +9,16 @@ namespace SongRedirector.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILinkProvider linkProvider;
+
+        public HomeController(ILinkProvider linkProvider)
+        {
+            this.linkProvider = linkProvider;
+        }
         public IActionResult Index()
         {
-            return Redirect("https://google.com");
+            string uri = linkProvider.GetSongLink();
+            return Redirect(uri);
         }
 
     }
