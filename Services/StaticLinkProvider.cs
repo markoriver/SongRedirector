@@ -10,10 +10,11 @@ public class StaticLinkProvider : ILinkProvider
         new Link("Eskalation", "https://www.youtube.com/watch?v=J10LaIqHj2s"),
         new Link("My Little Pony", "https://www.youtube.com/watch?v=GHy0xktlsSI"),
         new Link("Eternity Frog", "https://soundcloud.com/eternityfrog/her-face-1/s-kGyZs"),
-        new Link("Bob Marley", "https://www.youtube.com/watch?v=X2W3aG8uizA")
+        new Link("Bob Marley", "https://www.youtube.com/watch?v=X2W3aG8uizA"),
+        new Link("Tool Time", "https://www.youtube.com/watch?v=Ejz_1qoE7hc"),
     };
 
-    public string GetSongLink()
+    public string GetLink()
     {
         var idx = rnd.Next(links.Length);
         return links[idx].Uri;

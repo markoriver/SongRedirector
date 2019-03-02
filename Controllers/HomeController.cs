@@ -17,7 +17,7 @@ namespace SongRedirector.Controllers
         }
         public IActionResult Index()
         {
-            string uri = linkProvider.GetSongLink();
+            string uri = linkProvider.GetLink();
             return Redirect(uri);
         }
 

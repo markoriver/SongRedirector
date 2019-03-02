@@ -1,4 +1,4 @@
 public interface ILinkProvider
 {
-    string GetSongLink();
+    string GetLink();
 }
